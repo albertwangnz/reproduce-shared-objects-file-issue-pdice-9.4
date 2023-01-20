@@ -415,8 +415,8 @@
     <feedback_shown>Y</feedback_shown>
     <feedback_size>50000</feedback_size>
     <using_thread_priorities>Y</using_thread_priorities>
-    <!--shared_objects_file>${DB_CONN_SHARED_FILE}</shared_objects_file-->
-    <shared_objects_file>${Internal.Entry.Current.Directory}/sharefiles/database-connections-mysql.xml</shared_objects_file>
+    <shared_objects_file>${DB_CONN_SHARED_FILE}</shared_objects_file>
+    <!--shared_objects_file>${Internal.Entry.Current.Directory}/sharefiles/database-connections-mysql.xml</shared_objects_file-->
     <capture_step_performance>N</capture_step_performance>
     <step_performance_capturing_delay>1000</step_performance_capturing_delay>
     <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>

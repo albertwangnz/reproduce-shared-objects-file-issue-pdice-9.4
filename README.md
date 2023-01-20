@@ -40,3 +40,4 @@ It used to work in PDI-CE 8.0. But after we upgraded to PDI-CE 9.4, it does not 
   - Uncomment line #418, now we use variable
 2. Run the command: `sh kitchen.sh -file="reproduce-shared-objects-file-issue-pdice-9.4/main.kjb"`
 3. You will see the ETL is failed
+4. In the log, you will see the error `You need to specify a database connection`. That means the transformation did not use the file `sharefiles/database-connections-mysql.xml` so it cannot find the needed `database connection`.
