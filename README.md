@@ -7,8 +7,8 @@ When we used PDI-CE 8.0, we used the feature `Shared objects file` in the transf
 It used to work in PDI-CE 8.0. But after we upgraded to PDI-CE 9.4, it does not work anymore. If we hard-code the value in the Shared objects file field, as shown below, like `sharefiles/database-connections-mysql.xml`, it works. But the variable does not work anymore.
 
 ## Needed environment to reproduce
-(1) Linux
-(2) MySQL database engine
+1. Linux
+2. MySQL database engine
 
 ## How to reproduce
 ### Prepare
@@ -32,7 +32,7 @@ It used to work in PDI-CE 8.0. But after we upgraded to PDI-CE 9.4, it does not 
   - Line #419 shows we currenty use a hard-code value of the `Shared objects file`
 2. Run the command: `sh kitchen.sh -file="reproduce-shared-objects-file-issue-pdice-9.4/main.kjb"`
 3. You will see the ETL runs without error
-4. In the log, you will see the variable `DB_CONN_SHARED_FILE` is set value to `${Internal.Entry.Current.Directory}/sharefiles/database-connections-mysql.xml`
+4. In the log, you will see the variable `DB_CONN_SHARED_FILE` is set value to `${Internal.Entry.Current.Directory}/sharefiles/database-connections-mysql.xml`, even though we don't use the variable in this transformation.
 
 ### Reproduce the scenario of using variable in Shared objects file
 1. Edit the file `reproduce-shared-objects-file-issue-pdice-9.4/use_shared_object_file_variable.ktr`
